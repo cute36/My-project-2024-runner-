@@ -7,9 +7,9 @@ public class PlayerController : MonoBehaviour
     Vector3 targetPos;
     Vector3 startGamePosition;
     Quaternion startGameRotation;
-    float laneOffset = 2.5f;
+    float laneOffset = 5.0f;
     float laneChangeSpeed =15;
-    void Start()
+      void Start()
     {
             startGamePosition = transform.position;
             startGameRotation = transform.rotation;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
        if(Input.GetKeyDown(KeyCode.A) && targetPos.x > -laneOffset){
-        targetPos = new Vector3(targetPos.x- laneOffset, transform.position.y, transform.position.z);
+        targetPos = new Vector3(targetPos.x - laneOffset, transform.position.y, transform.position.z);
        } 
 
        if(Input.GetKeyDown(KeyCode.D)&& targetPos.x < laneOffset){
